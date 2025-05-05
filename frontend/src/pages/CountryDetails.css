@@ -1,0 +1,122 @@
+.country-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 2rem;
+  background-color: var(--card-background);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text-color);
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+}
+
+.country-details-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.country-flag-large {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.country-flag-large img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.country-info-detailed h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.country-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.info-section p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.info-section strong {
+  color: var(--primary-color);
+}
+
+.border-countries {
+  margin-top: 2rem;
+}
+
+.border-countries h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.border-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.border-button {
+  padding: 0.5rem 1rem;
+  background-color: var(--card-background);
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.border-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .country-details-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .country-info-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .country-info-detailed h1 {
+    font-size: 1.5rem;
+  }
+} 
