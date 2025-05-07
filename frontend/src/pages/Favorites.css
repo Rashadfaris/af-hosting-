@@ -1,0 +1,128 @@
+.favorites-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.favorites-container h2 {
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.favorite-card {
+  position: relative;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.favorite-card:hover {
+  transform: translateY(-5px);
+}
+
+.favorite-link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.favorite-flag {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+.favorite-flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorite-info {
+  padding: 1.5rem;
+}
+
+.favorite-info h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.favorite-info p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.favorite-info strong {
+  color: var(--primary-color);
+}
+
+.remove-favorite-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #e74c3c;
+}
+
+.remove-favorite-btn:hover {
+  transform: scale(1.1);
+  background-color: white;
+}
+
+.favorites-empty {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.favorites-empty h2 {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.favorites-empty p {
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.browse-countries-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.browse-countries-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .favorites-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .favorite-flag {
+    height: 140px;
+  }
+} 
