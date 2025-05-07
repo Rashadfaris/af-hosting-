@@ -1,0 +1,23 @@
+# Netlify Configuration File
+
+[build]
+  # Command to build the project
+  command = "npm run build"
+  # Directory to publish to Netlify
+  publish = "build"
+
+[build.environment]
+  # You can define environment variables here
+  NODE_ENV = "production"
+
+[[redirects]]
+  # Example redirect rule
+  from = "/old-url"
+  to = "/new-url"
+  status = 301
+
+[[headers]]
+  # Custom header configuration
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
