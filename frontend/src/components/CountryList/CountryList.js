@@ -1,7 +1,7 @@
 // src/components/CountryList.js
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { useFavorites } from '../context/FavoritesContext';
+import { Link } from 'react-router-dom';  // Correct way to import
+import { useFavorites } from '../../context/FavoritesContext';
 import './CountryList.css';
 
 const CountryList = ({ searchTerm, selectedRegion }) => {
